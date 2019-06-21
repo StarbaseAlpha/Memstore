@@ -32,7 +32,7 @@ function Memstore() {
   };
 
   store.put = async (key,value) => {
-    data[key] = value;
+    data[key] = clone(value);
     let e = {
       "event": "write",
       "key": key,
@@ -120,7 +120,7 @@ function Memstore() {
 
   store.importDB = async (items) => {
     items.forEach(item=>{
-      data[item.key] = item.value;
+      data[item.key] = clone(item.value);
     });
     let e = {
       "event": "importDB",
