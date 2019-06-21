@@ -8,6 +8,10 @@ function Memstore() {
 
   const clone = (src) => {
     let target = {};
+    if (typeof src === 'string') {
+      target = src.toString();
+      return target;
+    }
     if (src instanceof Array) {
       target = [];
     }
