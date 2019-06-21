@@ -1,6 +1,6 @@
 {
   "name": "@starbase/memstore",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Starbase Memory Store",
   "main": "index.js",
   "browser": "memstore.min.js",
